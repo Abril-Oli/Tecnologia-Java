@@ -1,11 +1,17 @@
 package mains;
 
+import utils.AlternadorGenerics;
+
+import utils.Comunicador;
+import utils.ComunicadorMayus;
+import utils.ComunicadorMinus;
+
 public class Main03 {
 
 	public static void main(String[] args) {
 	
 		//el alternador recibira un comunicador- clase asbtracta padre//
-		Alternador<Comunicador> alter = Alternador<Comunicador>();
+		AlternadorGenerics<Comunicador> alter = new AlternadorGenerics<Comunicador>();
 		
 		//seteamos nuestros comunicadores hijos, com Mayus y com Minus//		
 		alter.setPrimario(new ComunicadorMayus());
